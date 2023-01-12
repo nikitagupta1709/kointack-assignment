@@ -1,0 +1,16 @@
+{
+  "name": "stackoverflow-nodejs-backend",
+  "version": "1.0.0",
+  "description": "Kointrack backend assignment using Express",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server",
+    "dev": "nodemon src/server"
+  },
+  "author": "Kointrack Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.18"
+  }
+}
