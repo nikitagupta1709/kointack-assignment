@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
 
 const questionSchema = new mongoose.Schema({
-    questionname: {
+    question: {
+        type: String,
+        required: true
+    },
+    email:{
         type: String,
         required: true
     }
