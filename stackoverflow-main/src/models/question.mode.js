@@ -11,7 +11,6 @@ const questionSchema = new mongoose.Schema({
     },
     count:{
         type: Number,
-        required:true,
         default: 0
     },
     answers:{
