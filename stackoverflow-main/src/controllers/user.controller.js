@@ -6,6 +6,7 @@ const dotenv = require("dotenv") ;
 dotenv.config();
 const JWT_SECRET = process.env.JWT_SECRET;
 
+// register
 const register = async(req, res) => {
     try {
         let {username, email, password} = req.body;
@@ -49,6 +50,7 @@ const register = async(req, res) => {
     
 }
 
+// login
 const login = async(req, res) => {
     try {
         const user = req.body

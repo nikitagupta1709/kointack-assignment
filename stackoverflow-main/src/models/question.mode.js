@@ -5,10 +5,20 @@ const questionSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    email:{
+    userId:{
         type: String,
         required: true
+    },
+    count:{
+        type: Number,
+        required:true,
+        default: 0
+    },
+    answers:{
+        type:Array,
+        default:[]
     }
+
 },{timestamps:true, versionKey:false});
 module.exports.questionModel = mongoose.model("questions", questionSchema);
 

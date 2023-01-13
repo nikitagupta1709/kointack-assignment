@@ -5,12 +5,15 @@ const { connection } = require("./config/db.js");
 const userRouter = require("./routes/user.route.js");
 const questionRouter = require("./routes/question.route.js");
 const answerRouter = require("./routes/answer.route.js");
+const middleware = require("./middleware/index.js");
 
 dotenv.config();
 const app = express();
 
 app.use(express.json());
 app.use(cors());
+
+app.use(middleware);
 
 app.get("/", (req, res)=>{
   res.send("Stackoverflow");
