@@ -10,6 +10,7 @@ let mongo_url = process.env.MONGO_URL;
 const connection = () => {
     try {
         // we use mongoose.connect for connecting it to my mongodb
+        
         mongoose.connect(mongo_url,{
             useNewUrlParser : true,
             useUnifiedTopology: true,

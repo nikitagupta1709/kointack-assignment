@@ -114,12 +114,15 @@ const updateQuestion = async (req, res) =>{
 // to search a question
 const searchQuestion = async (req, res) =>{
     try {
+        // getting title from query and finding
         let title = req.query.q;
         let question = await questionModel.find({ question:{$regex:title,$options:"$i"} })
+
         return res.send({
             error:false,
             data:question
         })
+        
     } catch (error) {
         return res.status(500).send({
             error: error,

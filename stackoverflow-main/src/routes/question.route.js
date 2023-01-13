@@ -17,6 +17,6 @@ questionRouter.get("/read/:_id", readQuestion);
 questionRouter.patch("/update/:_id", updateQuestion);
 
 // patch request is made in this route for searching a question 
-questionRouter.patch("/search", searchQuestion);
+questionRouter.get("/search", searchQuestion);
 
 module.exports = questionRouter;
