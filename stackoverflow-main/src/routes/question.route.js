@@ -1,5 +1,5 @@
 const express = require('express');
-const { askQuestion, allQuestions, readQuestion, updateQuestion } = require('../controllers/question.controller');
+const { askQuestion, allQuestions, readQuestion, updateQuestion, searchQuestion } = require('../controllers/question.controller');
 
 // all routes related to question route
 const questionRouter = express.Router();
@@ -15,5 +15,8 @@ questionRouter.get("/read/:_id", readQuestion);
 
 // patch request is made in this route for updating a question with a given question id
 questionRouter.patch("/update/:_id", updateQuestion);
+
+// patch request is made in this route for searching a question 
+questionRouter.patch("/search", searchQuestion);
 
 module.exports = questionRouter;
